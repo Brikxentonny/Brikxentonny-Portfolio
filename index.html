@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Portfolio & Resume</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">Portfolio</div>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="#admin">Admin</a></li>
+      </ul>
+      <button id="theme-toggle" class="btn-theme">Toggle Theme</button>
+    </nav>
+  </header>
+
+  <main>
+    <!-- About Section -->
+    <section id="about" class="container">
+      <h1>Brikxen Tonny</h1>
+      <p class="subtitle">Frontend Developer & Web Enthusiast</p>
+      <p>Welcome to my personal website! I build responsive and interactive web applications.</p>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="container">
+      <h2>Skills</h2>
+      <ul class="skills-list">
+        <li>HTML5 & CSS3</li>
+        <li>JavaScript (ES6+)</li>
+        <li>React.js</li>
+        <li>Git & GitHub</li>
+      </ul>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="container">
+      <h2>Projects</h2>
+      <div class="project-card">
+        <h3>Portfolio Web App</h3>
+        <p>Featured project built with HTML, CSS, JavaScript, and Google Sheets AppScript integration.</p>
+      </div>
+    </section>
+
+    <!-- Contact Me Section -->
+    <section id="contact" class="container">
+      <h2>Contact Me</h2>
+      <form id="contact-form">
+        <div class="form-group">
+          <label for="name">Name:</label>
+          <input type="text" id="name" required />
+        </div>
+        <div class="form-group">
+          <label for="email">Email:</label>
+          <input type="email" id="email" required />
+        </div>
+        <div class="form-group">
+          <label for="message">Message:</label>
+          <textarea id="message" rows="4" required></textarea>
+        </div>
+        <button type="submit" class="btn">Submit</button>
+      </form>
+      <div id="form-msg" class="msg-success"></div>
+    </section>
+
+    <!-- Admin Section -->
+    <section id="admin" class="container">
+      <h2>Admin Panel</h2>
+      
+      <!-- Admin Login Form -->
+      <div id="admin-login-sec">
+        <form id="login-form">
+          <div class="form-group">
+            <label for="username">Username:</label>
+            <input type="text" id="username" required />
+          </div>
+          <div class="form-group">
+            <label for="password">Password:</label>
+            <input type="password" id="password" required />
+          </div>
+          <button type="submit" class="btn">Login</button>
+          <p id="login-error" class="error-msg"></p>
+        </form>
+      </div>
+
+      <!-- Admin Responses Display (Hidden by default via CSS/JS) -->
+      <div id="admin-dashboard-sec" class="hidden">
+        <div class="dashboard-header">
+          <h3>User Submissions</h3>
+          <button id="logout-btn" class="btn-logout">Logout</button>
+        </div>
+        <div id="responses-list"></div>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
